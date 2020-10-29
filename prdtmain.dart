@@ -1,23 +1,25 @@
 import './product.dart';
-void Getinfo(){
-print("Enter prodt no.");  
-Product.prdtno=int.parse(stdin.readLineSync());  
-print("Enter prdt name");
-Product.prdtName=stdin.readLineSync()
-print("Enter product type");
-Product.prdtype=stdin.readLineSync();
-Product.price=Getprice(Product.prdtName,Product.prdtype);
+import 'dart:io';
 
-int Getprice(Product.prdtName,Product.prdtype){
-if(Product.prdtName=="Sony")
-Product.price==50,000;
-elseif(Product.prdtName=="Samsung")
-Product.price=51,000;
-if(Product.prdtype!="mobile")
-Product.price+=((15*price)/100);
-return Product.price;
+void getinfo({Product prdt}){
+print("Enter prodt no.");  
+prdt.prdtno=int.parse(stdin.readLineSync());  
+print("Enter prdt name");
+prdt.prdtName=stdin.readLineSync();
+print("Enter product type");
+prdt.prdtype=stdin.readLineSync();
+prdt.price=getprice({Product prdt});
 }
-void Display(Product prdt)
+int getprice({Product prdt}){
+if(prdt.prdtName=="Sony")
+prdt.price==50000;
+else if(prdt.prdtName=="Samsung")
+prdt.price=51000;
+if(prdt.prdtype!="mobile")
+prdt.price+=((15*price)/100);
+return prdt.price;
+}
+void display({Product prdt})
 {
   print("Prdt no:$prdtno");
   print("PrdtName:$prdtName");
@@ -25,7 +27,13 @@ void Display(Product prdt)
   print("Prdtprice:$prdtprice");
 }
 main(List<String>args){
-  Getinfo();
-Display(Product Product);
+  Product prdt=Product(){
+    prdt.prdtno=0;
+    prdt.prdtype='NA';
+    prdt.prdtName='NA';
+    prdt.price=0;
+  }
+  getinfo({Product prdt});
+display({Product prdt});
 
 }

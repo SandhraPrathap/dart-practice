@@ -3,5 +3,5 @@ class Product{
   String prdtype;
   String prdtName;
   int price;
-Product(this.prdtno,this.prdtype,this.prdtName,this.prdtprice);
+Product();
 }
