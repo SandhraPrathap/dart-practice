@@ -1,9 +1,9 @@
 import './product.dart';
 import 'dart:io';
 
-void getinfo({Product prdt}){
-print("Enter prodt no.");  
-prdt.prdtno=int.parse(stdin.readLineSync());  
+void getinfo(Product prdt){
+print("Enter prodt no.");
+prdt.prdtno=int.parse(stdin.readLineSync());
 print("Enter prdt name");
 prdt.prdtName=stdin.readLineSync();
 print("Enter product type");
@@ -21,10 +21,10 @@ return prdt.price;
 }
 void display({Product prdt})
 {
-  print("Prdt no:$prdtno");
-  print("PrdtName:$prdtName");
-  print("Prdttype:$prdtype");
-  print("Prdtprice:$prdtprice");
+  print("Prdt no:${prdt.prdtno}");
+  print("PrdtName:${prdt.prdtname}");
+  print("Prdttype:${prdt.prdtype}");
+  print("Prdtprice:${prdt.prdtprice}");
 }
 main(List<String>args){
   Product prdt=Product(){
@@ -33,7 +33,7 @@ main(List<String>args){
     prdt.prdtName='NA';
     prdt.price=0;
   }
-  getinfo({Product prdt});
-display({Product prdt});
+  getinfo(prdt);
+display( prdt:prdt);
 
 }
