@@ -3,17 +3,17 @@ class Bank{
   String name;
   double acctBal;
 Bank(this.acctNo,this.name,this.acctBal);
-void Withdraw(double amt)
+void withdraw(double amt)
 {if(acctBal>amt)
 acctBal-=amt;
 
 }
-void Deposit(double amt)
+void deposit(double amt)
 {
 acctBal+=amt;
 
 }
-void Display()
+void display()
 {
   print("Accout no:$acctNo");
   print("Name:$name");
@@ -24,9 +24,9 @@ void Display()
 main(List<String>args)
 {
   Bank b=Bank(12356,"Sandhra Prathap",50000);
-  b.Withdraw(20000);
-  b.Display();
-  b.Deposit(40);
-  b.Display();
+  b.withdraw(20000);
+  b.display();
+  b.deposit(40);
+  b.display();
 }
 
