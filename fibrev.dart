@@ -20,12 +20,10 @@ int fibR(int n){
   return fibR(n-1)+fibR(n-2);
 }
 main(List<String>args)
-{
-  // int a=1,b=1,n;
-  // print("Enter the no. of terms");
-  // n=int.parse(stdin.readLineSync());
-  // stdout.write("$a ");
-  // stdout.write("$b ");
-  // fib(n,a,b);
-  stdout.write(fibR(6).toString());
+{int a=0,b=1,n;
+print("Enter the no. of terms");
+n=int.parse(stdin.readLineSync());
+stdout.write("$a ");
+stdout.write("$b ");
+fib(n,a,b);
 }
