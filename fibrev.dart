@@ -12,7 +12,7 @@ return fib(n-1,a,b);
 }
 }
 main(List<String>args)
-{int a=1,b=1,n;
+{int a=0,b=1,n;
 print("Enter the no. of terms");
 n=int.parse(stdin.readLineSync());
 stdout.write("$a ");
